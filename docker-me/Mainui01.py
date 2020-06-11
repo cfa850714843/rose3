@@ -58,7 +58,7 @@ class TitleBar(QWidget):
         # 支持qss设置背景
         self.setAttribute(Qt.WA_StyledBackground, True)
         self.mPos = None
-        self.iconSize = 20  # 图标的默认大小
+        self.iconSize = 30  # 图标的默认大小
         # 设置默认背景颜色,否则由于受到父窗口的影响导致透明
         self.setAutoFillBackground(True)
         palette = self.palette()
@@ -108,7 +108,7 @@ class TitleBar(QWidget):
     def setHeight(self, height=40, buttonLevel=32):
         """设置标题栏高度"""
         self.setMinimumHeight(height)
-        self.setMaximumHeight(height)
+        self.setMaximumHeight(height + 2)
         # 设置右边按钮的大小
         self.buttonMinimum.setMinimumSize(buttonLevel + 2, buttonLevel)
         self.buttonMinimum.setMaximumSize(buttonLevel + 2, buttonLevel)
